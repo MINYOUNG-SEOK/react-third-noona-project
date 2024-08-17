@@ -35,9 +35,10 @@ function App() {
     );
   };
 
+  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
   const getWeatherByLocation = async (lat, lon) => {
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=7c443b80b6f3d969bdeeb428e8f8fbb6&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
       const response = await fetch(url);
       const data = await response.json();
       setWeather(data);
@@ -53,7 +54,7 @@ function App() {
     setActiveButton(city);
     setLoading(true);
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7c443b80b6f3d969bdeeb428e8f8fbb6&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
       const response = await fetch(url);
       const data = await response.json();
       setWeather(data);
