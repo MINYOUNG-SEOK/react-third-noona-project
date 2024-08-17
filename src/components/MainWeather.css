@@ -1,0 +1,135 @@
+.main-weather {
+    text-align: center;
+    width: 400px;
+    margin-top: -5px;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.city-name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.weather-description {
+    font-size: 18px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 0
+}
+
+.nameAndDescription {
+    flex-direction: column;
+}
+
+.weather-icon {
+    height: 60px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.temperature {
+    font-size: 64px;
+    color: #333;
+}
+
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #0066cc;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.description:before {
+    content: "";
+    flex-grow: 1;
+    border-bottom: 1px solid #0066cc;
+    margin-right: 10px;
+}
+
+.description:after {
+    content: "";
+    flex-grow: 1;
+    border-bottom: 1px solid #0066cc;
+    margin-left: 10px;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    padding: 10px 30px;
+}
+
+.info-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.info-row .label {
+    width: 30%;
+    text-align: left;
+    color: #333;
+    font-weight: 600;
+}
+
+.info-row .value {
+    width: 30%;
+    text-align: center;
+}
+
+.info-row .additional-value {
+    width: 30%;
+    text-align: right;
+}
+
+.low-temp {
+    color: #1e90ff;
+    /* 하늘색 */
+}
+
+.high-temp {
+    color: #ff4500;
+    /* 빨간색 */
+}
+
+
+@media (max-width: 768px) {
+    .main-weather {
+        width: 100%;
+    }
+
+    .temperature {
+        font-size: 48px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .additional-info {
+        font-size: 16px;
+    }
+}

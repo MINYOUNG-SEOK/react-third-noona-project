@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    text-align: center;
+    padding: 0;
+    color: #333;
+}
+
+.header img {
+    width: 400px;
+    height: 50vh;
+    object-fit: cover;
+    margin-bottom: 0;
+    border-radius: 20px 20px 0 0;
+}
+
+.header h2 {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 17px;
+    z-index: 2;
+}

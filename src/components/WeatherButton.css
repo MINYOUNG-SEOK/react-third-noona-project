@@ -1,0 +1,60 @@
+.button-container {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.weather-button {
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    background-color: #0957D3;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    width: 100px;
+    /* 모든 버튼이 동일한 크기를 갖도록 설정 */
+}
+
+.weather-button:hover {
+    background-color: #063d95;
+    transform: translateY(-2px);
+}
+
+.weather-button.active {
+    background-color: #063d95;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .weather-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-right: 5px;
+        width: 90px;
+        /* 작은 화면에서도 동일한 비율로 크기 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        align-items: center;
+    }
+
+    .weather-button {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin-right: 0;
+        margin-bottom: 5px;
+        width: 80%;
+        /* 작은 화면에서 버튼이 넓게 차지하게 설정 */
+    }
+}
